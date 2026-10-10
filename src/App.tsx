@@ -1,7 +1,9 @@
+import {MainPage} from "./pages/MainPage/MainPage.tsx";
+
 function App() {
   return (
     <>
-     <h1>Кинопоиск</h1>
+        <MainPage />
     </>
   )
 }
