@@ -1,0 +1,5 @@
+export * from "./MainPage/MainPage.tsx"
+export * from "./CategoryMoviesPage/CategoryMoviesPage.tsx"
+export * from "./SearchPage/SearchPage.tsx"
+export * from "./FilteredMoviesPage/FilteredMoviesPage.tsx"
+export * from "./FavoritesPage/FavoritesPage.tsx"
