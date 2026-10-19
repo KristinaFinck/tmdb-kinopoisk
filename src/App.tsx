@@ -1,6 +1,5 @@
 import {Route, Routes} from "react-router-dom";
 import {PATH} from "./common"
-import {Header} from "./components/Header.tsx";
 import {MainPage,FilteredMoviesPage, CategoryMoviesPage, SearchPage, FavoritesPage} from "./pages";
 import {Layout} from "./components/Layout/Layout.tsx";
 
