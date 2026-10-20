@@ -1,7 +1,9 @@
 import {PATH} from "../common"
 import {NavLink} from "react-router-dom";
+import { useTheme } from "./../context/useTheme.ts"
 
 export const Header = () => {
+    const { theme, toggleTheme } = useTheme();
     return(
         <header>
             <nav>
@@ -28,6 +30,9 @@ export const Header = () => {
                     FilteredPage
                 </NavLink>
             </nav>
+            <button onClick={toggleTheme}>
+                {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
+            </button>
         </header>
     )
 }
