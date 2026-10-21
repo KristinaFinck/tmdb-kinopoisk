@@ -7,9 +7,15 @@ type Props = {
 }
 
 export const ThemeProvider = ({children}:Props) => {
-    const [theme, setTheme] = useState<ThemeType>("dark");
+    const [theme, setTheme] = useState<ThemeType>(() => {
+        const savedTheme = localStorage.getItem("theme");
+
+        return savedTheme === "dark" ? "dark" : "light";
+    });
+
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
     }, [theme]);
 
     const toggleTheme = () => {
