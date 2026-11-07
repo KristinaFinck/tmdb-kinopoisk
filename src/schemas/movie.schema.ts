@@ -4,7 +4,9 @@ export const movieSchema = z.object({
     id: z.number(),
     title: z.string(),
     poster_path: z.string().nullable(),
-    vote_average: z.number()
+    vote_average: z.number(),
+    overview: z.string(),
+    release_date: z.string()
 })
 export type MovieType = z.infer<typeof movieSchema>
 
