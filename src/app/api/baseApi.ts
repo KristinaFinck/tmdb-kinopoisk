@@ -7,7 +7,7 @@ export const baseApi = createApi({
         {
             baseUrl: "https://api.themoviedb.org/3",
         prepareHeaders: headers => {
-    const accessToken =  import.meta.env.VITE_TMDB_TOKEN
+    const accessToken =  import.meta.env.VITE_TMDB_ACCESS_TOKEN
     if (accessToken) {
         headers.set('Authorization', `Bearer ${accessToken}`)
     }

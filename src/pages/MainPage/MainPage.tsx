@@ -1,27 +1,15 @@
 import {useGetPopularMoviesQuery} from "../../services/moviesApi.ts";
+import {MovieCard} from "../../components/ MovieCard/MovieCard.tsx";
 
 export const MainPage = () => {
 
-    const {data, isLoading, error} = useGetPopularMoviesQuery()
-    const imageBaseUrl = 'https://image.tmdb.org/t/p/'
-    const posterSize = 'w500'
+    const {data} = useGetPopularMoviesQuery()
     return (
         <>
        <h1> Фильмы: </h1>
-            {data?.results.map((el) =>
-                <div key={el.id}>
-           <p>
-               {el.title}
-
-           </p>
-                    <img
-                        src={`${imageBaseUrl}${posterSize}${el.poster_path}`}
-                         alt={el.title} />
-
-                </div>
-
-            )
-            }
+            {data?.results.map((movie) => (
+                <MovieCard key={movie.id} movie={movie} />
+                ))}
         </>
     )
 }

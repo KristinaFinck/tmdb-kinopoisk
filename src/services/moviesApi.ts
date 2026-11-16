@@ -1,4 +1,4 @@
-import { baseApi } from './baseApi'
+import { baseApi } from './../app/api/baseApi.ts'
 import type {PopularMoviesType} from "../schemas/movie.schema";
 import {popularMoviesSchema} from "../schemas/movie.schema";
 
